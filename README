@@ -1,1 +1,36 @@
 = Considered Harmful
+<b>Version 1.0 (19 Jun 2009)</b>
+
+Author::    Yossef Mendelssohn (ymendel@pobox.com)
+Copyright:: Copyright (c) 2009 Yossef Mendelssohn
+License::   MIT License.  See MIT-LICENSE file for more details.
+
+Considered Harmful is a Ruby on Rails plugin that lets you "goto" locations rather than redirecting to them.
+
+== Installation
+
+script/plugin install git://github.com/ymendel/considered_harmful.git
+
+== Using Considered Harmful
+  
+Say you have a controller action like so:
+  
+    class ThingsController < ApplicationController
+      def update
+        # some code here
+        redirect_to thing
+      end
+    end
+
+That's just way too long. Try this instead.
+
+    class ThingsController < ApplicationController
+      def update
+        # some code here
+        goto thing
+      end
+    end
+
+== Version history:
+
+  1.0 - Initial release
